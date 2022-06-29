@@ -123,8 +123,9 @@ map area:hover{
   text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
   opacity: 0%;
 }
-#container figcaption:hover{
+#container figcaption.active {
   opacity: 100%;
+  pointer-events: none;
 }
 
 /* PÁGINA DO PAÍS */  
