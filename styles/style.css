@@ -133,7 +133,7 @@ map area:hover{
 
 /* FIGCAPTION DE CADA PÁIS*/
 
-#spain-caption{
+#iberian-peninsula-caption{
   position: absolute;
   top: 394px;
   right: 492px;
@@ -178,6 +178,22 @@ map area:hover{
   position: absolute;
   top: 189px;
   right: 334px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+#balkans-caption {
+  position: absolute;
+  top: 413px;
+  right: 273px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+#east-europe-caption {
+  position: absolute;
+  top: 293px;
+  right: 235px;
   font-size: 13px;
   color: white;
   text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
