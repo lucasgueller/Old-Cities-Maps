@@ -95,6 +95,7 @@ body {
   cursor: pointer;
 }
 
+
  /* FIM DO HEADER */
 
  .subtitle {
@@ -111,22 +112,77 @@ margin-left: 331.2px;
 map area:hover{
   outline: rgb(31, 31, 31) auto 2px; 
 }
+
+
+/* LÓGICA DO FIGCAPTION */
+
 #container{
   display: inline-block;
   position: relative;
 }
+
 #container figcaption {
-  position: absolute;
-  top: 402px;
-  right: 496px;
-  color: white;
-  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
   opacity: 0%;
 }
+
 #container figcaption.active {
   opacity: 100%;
   pointer-events: none;
 }
+
+
+/* FIGCAPTION DE CADA PÁIS*/
+
+#spain-caption{
+  position: absolute;
+  top: 394px;
+  right: 492px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+
+#france-caption {
+  position: absolute;
+  top: 344px;
+  right: 432px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+#italy-caption {
+  position: absolute;
+  top: 401px;
+  right: 371px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+#british-isles-caption {
+  position: absolute;
+  top: 255px;
+  right: 451px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+#central-europe-caption {
+  position: absolute;
+  top: 322px;
+  right: 326px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+#scandinavia-caption {
+  position: absolute;
+  top: 189px;
+  right: 334px;
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+
 
 /* PÁGINA DO PAÍS */  
 
@@ -137,6 +193,7 @@ map area:hover{
 }
 .country-image {
   width: 300px;
+  height: 300px;
   margin-top: 18px;
   border: 3px solid #FFF9D7;
 }
