@@ -18,22 +18,23 @@ body {
   grid-template-columns: 1fr;
   background-image: url('../Assets/1588\ -\ George\ Braun.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   box-shadow: 0px 8px 12px 0 rgb(52 57 61 / 70%);
+  width: 100%;
 }
 
 .main-header h1 {
-  padding: 20px 0;
+  padding: 10px 0;
   color: #fff;
-  font-size: 96px;
-  line-height: 108px;
+  font-size: 75px;
+  line-height: 85px;
   background-color: #0002;
   text-align: center;
   text-shadow: 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000, -2px -2px 2px #000;
 }
 
 .main-header .nav {
-  padding: 5px 20px;
+  padding: 2px 20px;
   display: flex;
   background-color: #000c;
   justify-content: space-between;
@@ -49,10 +50,10 @@ body {
 
 .main-header .nav .menu a {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 15px;
   text-decoration: none;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -99,7 +100,7 @@ body {
  /* FIM DO HEADER */
 
  .subtitle {
-  margin-top: 86px;
+  margin-top: 70px;
   margin-bottom: 13px;
   color: #fff;
   text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
@@ -244,4 +245,43 @@ font-size: 22px;
   cursor: pointer;
 }
 
+
 /* PÁGINA DA CIDADE */
+
+.city-title{
+  font-size: 48px;
+  margin-left: 410px;
+  padding: 30px 0;
+  color: #FFF9D7;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+
+.container-city {
+display: flex;
+flex-direction: row;
+}
+
+.container-map {
+background-color: #FFF9D7;
+width: 500px;
+position: relative;
+overflow: hidden;
+/* width: fit-content; */
+}
+
+.container-city-history{
+width: 310px;
+padding: 0px 30px;
+margin-right: 44px;
+}
+
+.container-city-history p {
+color: #FFF;
+font-size: 14px;
+}
+
+#openseadragon1 {
+  width: 400px;
+  height: 400px;
+  margin: 50px;
+}

@@ -123,3 +123,5 @@ eastEurope.addEventListener('mouseout', () => {
   if (eastEuropeCaption.classList.contains('active'))
     eastEuropeCaption.classList.remove('active')
 })
+
+
