@@ -43,47 +43,74 @@
     </header>
 
     <h2 class="city-title">PARIS</h2>
-    <div class="container-city">
-      <div class="container-city-history">
-        <h3>CITY HISTORY</h3>
-        <br>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
 
+    <div class="container-city">
+
+      <div class="buildings">
+        <p>Click on the buildings names to show the place on the map</p>
+        <br>
+        <br>
+        <h3>BUILDINGS</h3>
+        <br>
+        <ul>
+          <li><a href="../index.html">Louvre</a></li>
+          <li><a href="../index.html">Notre-Dame</a></li>
+          <li><a href="../index.html">Bastille</a></li>
+          <li><a href="../index.html">Conciergerie</a></li>
+
+        </ul>
+      </div>
       <div class="container-map">
         <h3 class="map-name">PARIS - 1380 - HENRI LEGRAND</h3>
-       
+        <!-- <div id="openseadragon1"></div> -->
         <div id="openseadragon1"></div>
-        <script src="../openseadragon/openseadragon.min.js"></script>
+  
+
+        <script src="../node_modules/openseadragon/build/openseadragon/openseadragon.min.js"></script>
         <script type="text/javascript">
             var viewer = OpenSeadragon({
                 id: "openseadragon1",
-                prefixUrl: "../openseadragon/images/",
+                prefixUrl: "../node_modules/openseadragon/build/openseadragon/images/",
                 tileSources: [{
                //required	
                type:       "zoomifytileservice",
                width:      17100,
                height:     15000,
-               tilesUrl:   "../Zoomify/old-cities/1380-paris/",	
+               tilesUrl:   "../Assets/Images_tiles/1380-paris/",	
            }],
-           showNavigator:true
             });
         </script>
+             <!-- <script type="text/javascript">
+              var viewer = OpenSeadragon({
+                  id: "openseadragon2",
+                  prefixUrl: "../openseadragon/images/",
+                  tileSources: [{
+                 //required	
+                 type:       "zoomifytileservice",
+                 width:      11900,
+                 height:     9400,
+                 tilesUrl:   "",	
+             }],
+              });
+             </script> -->
         
-        <ul>
-          <li><a href="./index.html">1380</a></li>
-          <li><a href="./index.html">1530</a></li>
-          <li><a href="./index.html">1550</a></li>
+        <ul class="map-date">
+          <li><a href="../index.html">1380</a></li>
+          <li><a href="../index.html">1530</a></li>
+          <li><a href="../index.html">1550</a></li>
       </ul>
       </div>
     </div>
-    <map name="city-map">
-      <area shape="poly" coords="259,253,258,247,265,247,266,253" href="../index.html" >
-    </map>
+
+    <div class="container-city-history">
+      <h3>CITY HISTORY</h3>
+      <br>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
   
   </body>
 </html>

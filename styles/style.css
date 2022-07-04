@@ -100,18 +100,19 @@ body {
  /* FIM DO HEADER */
 
  .subtitle {
-  margin-top: 70px;
-  margin-bottom: 13px;
+  margin-top: 60px;
+  margin-bottom: 15px;
   color: #fff;
   text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
  }
 
-.map-europe {
-margin-left: 331.2px;
+.container-map-europe {
+display: flex;
+justify-content: center;
 }
 
 map area:hover{
-  outline: rgb(31, 31, 31) auto 2px; 
+  outline: rgb(31, 31, 31) auto 1px; 
 }
 
 
@@ -224,23 +225,44 @@ map area:hover{
 .container {
   display: flex;
   flex-direction: row;
+  /* justify-content: space-around; */
 }
 .cities {
-margin-left: 170px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+margin-left: 100px;
+margin-right: 100px;
 margin-top:85px;
 }
+
+.container-cities-list {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
 .cities h3 {
 color: #fff;
 font-size: 28px;
 text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
-margin-bottom: 18px;
+margin-bottom: 30px;
+text-align: center;
 }
-.cities ul a {
+
+.cities-name header {
+  color: #FFF9D7;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+
+.cities-name a {
 text-decoration: none;
 color: #FFF;
 font-size: 22px;
 }
-.cities ul a:hover {
+.cities-name a:hover {
   color: #c91b1b;
   cursor: pointer;
 }
@@ -250,7 +272,7 @@ font-size: 22px;
 
 .city-title{
   font-size: 48px;
-  margin-left: 410px;
+  margin-left: 20%;
   padding: 30px 0;
   color: #FFF9D7;
   text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
@@ -259,29 +281,79 @@ font-size: 22px;
 .container-city {
 display: flex;
 flex-direction: row;
+justify-content: space-between;
 }
+
+
+.buildings {
+ margin-left: 1%;
+  margin-right: 1%;
+  width: 18%;
+  color: #FFF;
+}
+
+.buildings h3 {
+  text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+
+.buildings ul li {
+margin-bottom: 8px;
+list-style-type: none;
+  }
+
+.buildings ul li a {
+text-decoration: none;
+color: #FFF;
+font-size: 20px;
+}
+.buildings ul li a:hover {
+ color: #c91b1b;
+  }
+
 
 .container-map {
-background-color: #FFF9D7;
-width: 500px;
-position: relative;
-overflow: hidden;
-/* width: fit-content; */
+  background-color: #FFF9D7;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  }
+
+.map-name {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.container-city-history{
-width: 310px;
-padding: 0px 30px;
-margin-right: 44px;
+#openseadragon1 {
+  width: 800px;
+  height: 600px;
+  background-color: #424242;
+  margin-bottom: 20px;
+  /* margin: auto; */
 }
+
+ul.map-date {
+  padding-bottom: 10px;
+}
+.map-date li a {
+font-size: 20px;
+color: #000;
+}
+.map-date li  {
+  display: inline;
+  margin: 20px;
+}
+
+
+
+
+.container-city-history{
+  width: 80%;
+  margin-top: 50px;
+  }
 
 .container-city-history p {
 color: #FFF;
 font-size: 14px;
 }
 
-#openseadragon1 {
-  width: 400px;
-  height: 400px;
-  margin: 50px;
-}
