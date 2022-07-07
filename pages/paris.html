@@ -19,7 +19,8 @@
     <!-- Font awesome 5.14.4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-    <script src="./scripts/main.js" defer></script>
+    <script src="../scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   
   </head>
   <body>
@@ -62,23 +63,82 @@
       </div>
       <div class="container-map">
         <h3 class="map-name">PARIS - 1380 - HENRI LEGRAND</h3>
+        <button class="next">Next</button>
+        <button onclick="hEl.goToElementLocation('gif')">LOUVRE</button>
+        
         <!-- <div id="openseadragon1"></div> -->
         <div id="openseadragon1"></div>
   
 
         <script src="../node_modules/openseadragon/build/openseadragon/openseadragon.min.js"></script>
+        <script src="../scripts/OpenSeadragonHTMLelements.js"></script>
+
         <script type="text/javascript">
-            var viewer = OpenSeadragon({
+          
+          var tileSources = [{
+                 //required	
+                 type:       "zoomifytileservice",
+                 width:      11900,
+                 height:     9400,
+                 tilesUrl:   "../Assets/Images_tiles/1530-paris/"
+             },
+             {
+                 //required	
+                 type:       "zoomifytileservice",
+                 width:      17100,
+                 height:     15000,
+                 tilesUrl:   "../Assets/Images_tiles/1380-paris/"
+             }
+            ];
+
+tileSources = tileSources.map(function(tileSource, i) {
+  return {
+    tileSource: tileSource,
+    opacity: i === 0 ? 1 : 0,
+    preload: i === 1 ? true : false
+  };
+});
+
+
+var viewer = OpenSeadragon({
                 id: "openseadragon1",
                 prefixUrl: "../node_modules/openseadragon/build/openseadragon/images/",
-                tileSources: [{
-               //required	
-               type:       "zoomifytileservice",
-               width:      17100,
-               height:     15000,
-               tilesUrl:   "../Assets/Images_tiles/1380-paris/",	
-           }],
+                tileSources: tileSources
             });
+
+var index = 0;
+
+$('.next').on('click', function () {
+  var oldTiledImage = viewer.world.getItemAt(index);
+  
+  index = (index + 1) % tileSources.length;
+  var nextIndex = (index + 1) % tileSources.length;
+  
+  var newTiledImage = viewer.world.getItemAt(index);
+  var nextTiledImage = viewer.world.getItemAt(nextIndex);
+  
+  oldTiledImage.setOpacity(0);
+  newTiledImage.setOpacity(1);
+  nextTiledImage.setPreload(true);
+});
+
+var hEl = viewer.HTMLelements()
+
+// HTML element with the gif. Could be any other element, another div, iframe with embed video, text editor, image, possibilities are endless!!!!
+var gif = document.createElement('img')
+gif.src = 'https://i.gifer.com/1fLL.gif'
+gif.style.objectFit = 'contain'
+
+hEl.addElement({
+  id: 'gif',
+  element: gif,
+  x: 8200,
+  y: 9500,
+  width: 300,
+  height: 300
+})
+
+
         </script>
              <!-- <script type="text/javascript">
               var viewer = OpenSeadragon({
